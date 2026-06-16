@@ -1,0 +1,45 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "LLM Wiki Page Frontmatter",
+  "type": "object",
+  "required": ["title", "kind"],
+  "additionalProperties": true,
+  "properties": {
+    "title": {
+      "type": "string"
+    },
+    "kind": {
+      "type": "string",
+      "enum": ["index", "overview", "source", "concept", "workflow", "journal", "maintenance", "page"]
+    },
+    "source_count": {
+      "type": ["integer", "string"]
+    },
+    "raw_path": {
+      "type": "string"
+    },
+    "compiled_at": {
+      "type": "string"
+    },
+    "lenses": {
+      "type": "string",
+      "description": "Comma-separated Creative Impact Lens IDs."
+    },
+    "pipeline_stages": {
+      "type": "string",
+      "description": "Comma-separated creative production pipeline stages."
+    },
+    "industries": {
+      "type": "string",
+      "description": "Comma-separated creative industries."
+    },
+    "risk_level": {
+      "type": "string",
+      "enum": ["low", "medium", "high", "unknown"]
+    },
+    "status": {
+      "type": "string"
+    }
+  }
+}
+

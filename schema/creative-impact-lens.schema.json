@@ -1,0 +1,46 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Creative Impact Lens Taxonomy",
+  "type": "object",
+  "required": ["lenses", "pipeline_stages", "industries", "risk_levels"],
+  "properties": {
+    "lenses": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "label"],
+        "properties": {
+          "id": {
+            "type": "string",
+            "enum": ["workflow", "copyright", "creator_labor", "market_platform", "ethics_authenticity"]
+          },
+          "label": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "pipeline_stages": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": ["research", "ideation", "generation", "editing", "review", "distribution"]
+      }
+    },
+    "industries": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": ["music", "image", "video", "film", "advertising", "game"]
+      }
+    },
+    "risk_levels": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": ["low", "medium", "high", "unknown"]
+      }
+    }
+  }
+}
+
