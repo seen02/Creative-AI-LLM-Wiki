@@ -33,11 +33,9 @@ This repository intentionally includes example source files in `raw/`. They are 
 
 The included raw files are examples, not required system files. Users can:
 
-- keep them to explore the default Creative AI wiki,
 - add their own permitted `.md`, `.txt`, or `.pdf` source files beside them,
 - or replace the contents of `raw/` with their own materials before running `python scripts\llm_wiki.py compile`.
 
-When publishing a fork or public repository, only commit raw materials that you are allowed to share. Do not commit private notes, paid articles, confidential documents, course slides, API keys, or copyrighted files that you do not have permission to redistribute.
 
 ## Repository Contents
 
@@ -115,7 +113,7 @@ To build your own wiki, add or replace sources with a PDF, Markdown, or text fil
 Copy-Item "C:\path\to\creative-ai-report.pdf" raw\
 ```
 
-If you replace the sample materials, rerun the compiler in the next step. Do not commit private or copyrighted source files to a public repository.
+If you replace the sample materials, rerun the compiler in the next step.
 
 ### 5. Compile the wiki
 
