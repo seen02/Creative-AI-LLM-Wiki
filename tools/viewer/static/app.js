@@ -63,18 +63,20 @@
     });
   });
 
-  document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-    anchor.addEventListener("click", (event) => {
-      const id = anchor.getAttribute("href");
-      if (!id || id === "#") return;
-      const target = document.querySelector(id);
+  document.addEventListener("click", (event) => {
+    const anchor = event.target.closest('a[href*="#"]');
+    if (!anchor) return;
+    const href = anchor.getAttribute("href");
+    const url = new URL(anchor.href, window.location.href);
+    if (url.pathname === window.location.pathname && url.hash) {
+      const target = document.querySelector(url.hash);
       if (!target) return;
       event.preventDefault();
       if (target.matches("details")) {
         target.open = true;
       }
       target.scrollIntoView({ behavior: "smooth", block: "start" });
-      history.replaceState(null, "", id);
-    });
+      history.replaceState(null, "", url.hash);
+    }
   });
 })();

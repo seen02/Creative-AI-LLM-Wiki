@@ -1,22 +1,22 @@
 :root {
-  --bg: #f4f6f5;
-  --surface: #ffffff;
-  --surface-soft: #eef6f3;
-  --surface-warm: #fbf6e9;
-  --ink: #20242a;
-  --muted: #66717c;
-  --line: #dce2dd;
-  --line-strong: #c6d0ca;
-  --accent: #167064;
-  --accent-dark: #124f49;
-  --blue: #4158d0;
-  --pink: #b83b5e;
-  --amber: #a06a00;
-  --violet: #6554a3;
-  --source: #227c9d;
-  --concept: #8a5a00;
-  --workflow: #5b5f97;
-  --shadow: 0 12px 28px rgba(29, 39, 45, 0.08);
+  --bg: #1e1e1e;
+  --surface: #252525;
+  --surface-soft: #323232;
+  --surface-warm: #3a3a3a;
+  --ink: #dcddde;
+  --muted: #999999;
+  --line: #3e3e3e;
+  --line-strong: #4e4e4e;
+  --accent: #a6e22e;
+  --accent-dark: #88bc22;
+  --blue: #66d9ef;
+  --pink: #f92672;
+  --amber: #fd971f;
+  --violet: #ae81ff;
+  --source: #66d9ef;
+  --concept: #fd971f;
+  --workflow: #ae81ff;
+  --shadow: 0 12px 28px rgba(0, 0, 0, 0.5);
   font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 }
 
@@ -49,7 +49,7 @@ button,
   border: 1px solid transparent;
   border-radius: 6px;
   padding: 10px 14px;
-  color: #ffffff;
+  color: #1e1e1e;
   background: var(--accent);
   font: inherit;
   font-weight: 800;
@@ -69,14 +69,15 @@ input {
   border-radius: 6px;
   padding: 11px 12px;
   color: var(--ink);
-  background: #ffffff;
+  background: var(--surface);
   font: inherit;
 }
 
 code {
   padding: 2px 5px;
   border-radius: 4px;
-  background: #eef1ef;
+  background: var(--surface-soft);
+  color: var(--ink);
 }
 
 .app-shell {
@@ -96,15 +97,15 @@ code {
   overflow: auto;
   border: 1px solid var(--line);
   border-radius: 8px;
-  background: #ffffff;
+  background: var(--surface);
   box-shadow: var(--shadow);
 }
 
 .sidebar-brand {
   padding: 18px;
   color: #ffffff;
-  background: #1f2f2d;
-  border-bottom: 3px solid #e5b640;
+  background: #1a1a1a;
+  border-bottom: 3px solid var(--accent);
 }
 
 .sidebar-brand strong,
@@ -229,6 +230,7 @@ code {
 .profile-strip,
 .document,
 .doc-context {
+  scroll-margin-top: 18px;
   border: 1px solid var(--line);
   border-radius: 8px;
   background: var(--surface);
@@ -286,7 +288,7 @@ code {
   border: 1px solid var(--line);
   border-radius: 999px;
   padding: 4px 9px;
-  background: #f8faf8;
+  background: var(--surface-soft);
   color: var(--ink);
   font-size: 12px;
   font-weight: 800;
@@ -299,7 +301,7 @@ code {
 }
 
 .filter-pill.active {
-  color: #ffffff;
+  color: #1e1e1e;
   background: var(--accent);
   border-color: var(--accent);
 }
@@ -324,7 +326,7 @@ code {
   padding: 12px;
   border: 1px solid var(--line);
   border-radius: 8px;
-  background: #fbfcfb;
+  background: var(--surface);
 }
 
 .stat span {
@@ -363,7 +365,7 @@ code {
 .pipeline-stage {
   border: 1px solid var(--line);
   border-radius: 8px;
-  background: #fbfcfb;
+  background: var(--surface);
 }
 
 .result {
@@ -399,6 +401,7 @@ code {
 }
 
 .reader-grid {
+  scroll-margin-top: 18px;
   display: grid;
   grid-template-columns: minmax(0, 1fr) 330px;
   gap: 18px;
@@ -416,7 +419,7 @@ code {
   grid-template-columns: minmax(0, 1fr) minmax(220px, 320px);
   gap: 18px;
   padding: 20px;
-  background: #f8faf8;
+  background: var(--surface);
   border-bottom: 1px solid var(--line);
 }
 
@@ -460,7 +463,7 @@ code {
   padding: 12px;
   border: 1px solid var(--line);
   border-radius: 8px;
-  background: #ffffff;
+  background: var(--surface-soft);
 }
 
 .doc-meta-grid span {
@@ -487,7 +490,7 @@ code {
   gap: 8px;
   padding: 10px 20px;
   border-bottom: 1px solid var(--line);
-  background: #fbfcfb;
+  background: var(--surface-soft);
 }
 
 .reader-tools button {
@@ -495,13 +498,14 @@ code {
   padding: 7px 11px;
   border-color: var(--line);
   color: var(--ink);
-  background: #ffffff;
+  background: var(--surface);
   font-size: 12px;
 }
 
 .reader-tools button:hover {
   border-color: var(--accent);
-  color: #ffffff;
+  background: var(--accent);
+  color: #1e1e1e;
 }
 
 .document-body h1,
@@ -538,12 +542,12 @@ code {
   margin: 12px clamp(14px, 2.5vw, 28px);
   border: 1px solid var(--line);
   border-radius: 8px;
-  background: #ffffff;
+  background: var(--surface);
 }
 
 .doc-section[open] {
   border-color: var(--line-strong);
-  box-shadow: 0 8px 20px rgba(29, 39, 45, 0.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
 }
 
 .doc-section summary {
@@ -664,7 +668,7 @@ code {
   padding: 10px;
   border: 1px solid var(--line);
   border-radius: 6px;
-  background: #fbfcfb;
+  background: var(--surface-soft);
 }
 
 .related-link:hover {
@@ -825,7 +829,7 @@ code {
   margin: 16px 0 10px;
   overflow: hidden;
   border-radius: 999px;
-  background: #e5e9e6;
+  background: var(--surface-soft);
 }
 
 .stage-bar i {
@@ -855,14 +859,14 @@ code {
 }
 
 .risk-matrix thead th {
-  background: #f3f5f2;
+  background: var(--surface-soft);
   color: var(--muted);
 }
 
 .risk-matrix td {
   min-width: 120px;
   vertical-align: top;
-  background: #ffffff;
+  background: var(--surface);
 }
 
 .matrix-label {
@@ -877,7 +881,7 @@ code {
   height: 7px;
   overflow: hidden;
   border-radius: 999px;
-  background: #e3e8e5;
+  background: var(--surface-soft);
 }
 
 .matrix-bar::before {
@@ -932,7 +936,7 @@ code {
   display: block;
   width: 100%;
   min-width: 820px;
-  background: #fbfcfb;
+  background: var(--surface);
   border: 1px solid var(--line);
   border-radius: 8px;
 }
@@ -960,7 +964,7 @@ code {
 }
 
 .node rect {
-  fill: #ffffff;
+  fill: var(--surface);
   stroke: var(--line-strong);
   stroke-width: 1.2;
 }
@@ -970,7 +974,7 @@ code {
 }
 
 .node circle {
-  stroke: #ffffff;
+  stroke: var(--surface);
   stroke-width: 2;
 }
 
@@ -1022,7 +1026,7 @@ code {
   border: 1px solid var(--line);
   border-radius: 6px;
   color: var(--muted);
-  background: #fbfcfb;
+  background: var(--surface);
   font-size: 12px;
 }
 
@@ -1049,7 +1053,7 @@ code {
   padding: 12px;
   border: 1px solid var(--line);
   border-radius: 8px;
-  background: #fbfcfb;
+  background: var(--surface);
 }
 
 .catalog-filters div {
@@ -1097,90 +1101,90 @@ code {
 
 .empty {
   padding: 16px;
-  border: 1px solid #ecd38c;
+  border: 1px solid var(--amber);
   border-radius: 8px;
   background: var(--surface-warm);
-  color: #6e5214;
+  color: var(--amber);
 }
 
 .kind-overview,
 .kind-index,
 .kind-page {
-  border-color: #b7d7cd;
-  background: #e7f4f0;
-  color: #176152;
+  border-color: #2e4d44;
+  background: #1e2e2a;
+  color: #a6e22e;
 }
 
 .kind-concept {
-  border-color: #f1d78a;
-  background: #fff8df;
-  color: #795b00;
+  border-color: #4d452e;
+  background: #2e2a1e;
+  color: #fd971f;
 }
 
 .kind-source {
-  border-color: #afd9e7;
-  background: #e9f6fb;
-  color: #16627b;
+  border-color: #2e444d;
+  background: #1e2a2e;
+  color: #66d9ef;
 }
 
 .kind-workflow {
-  border-color: #c8c2ed;
-  background: #f2f0ff;
-  color: #51458d;
+  border-color: #3e2e4d;
+  background: #271e2e;
+  color: #ae81ff;
 }
 
 .lens-workflow {
-  border-color: #b7d7cd;
-  background: #e7f4f0;
-  color: #176152;
+  border-color: #2e4d44;
+  background: #1e2e2a;
+  color: #a6e22e;
 }
 
 .lens-copyright {
-  border-color: #f0c8d3;
-  background: #fff0f4;
-  color: #9e2447;
+  border-color: #4d2e36;
+  background: #2e1e22;
+  color: #f92672;
 }
 
 .lens-creator_labor {
-  border-color: #d8c6f3;
-  background: #f4efff;
-  color: #5a3a8f;
+  border-color: #3e2e4d;
+  background: #271e2e;
+  color: #ae81ff;
 }
 
 .lens-market_platform {
-  border-color: #f1d78a;
-  background: #fff8df;
-  color: #795b00;
+  border-color: #4d452e;
+  background: #2e2a1e;
+  color: #fd971f;
 }
 
 .lens-ethics_authenticity {
-  border-color: #b9c4ff;
-  background: #eef1ff;
-  color: #3347bd;
+  border-color: #2e364d;
+  background: #1e222e;
+  color: #66d9ef;
 }
 
 .risk-high {
-  background: #ffe8e8;
-  border-color: #f1aaaa;
-  color: #a21f1f;
+  background: #3e1e1e;
+  border-color: #6d2e2e;
+  color: #ff6666;
 }
 
 .risk-medium {
-  background: #fff4d9;
-  border-color: #e8ca72;
-  color: #6e5214;
+  background: #3e2e1e;
+  border-color: #6d5b2e;
+  color: #fd971f;
 }
 
 .risk-low {
-  background: #e7f4f0;
-  border-color: #b7d7cd;
-  color: #176152;
+  background: #1e2e2a;
+  border-color: #2e4d44;
+  color: #a6e22e;
 }
 
 .risk-unknown {
-  background: #f2f3f3;
-  border-color: #d7dcdc;
-  color: #58616a;
+  background: #252525;
+  border-color: #3e3e3e;
+  color: #999999;
 }
 
 .profile-strip {
@@ -1189,6 +1193,10 @@ code {
   gap: 16px;
   margin-top: 18px;
   padding: 18px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--surface);
+  box-shadow: var(--shadow);
 }
 
 .profile-strip strong {
