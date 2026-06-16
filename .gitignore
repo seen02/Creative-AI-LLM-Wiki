@@ -1,0 +1,13 @@
+.venv/
+__pycache__/
+*.pyc
+
+# Generated extraction cache
+.wiki_cache/
+
+# Local legacy backups and private source materials
+archive/
+
+# Keep the maintenance inbox folder but ignore local requests by default.
+wiki/maintenance/inbox/*
+!wiki/maintenance/inbox/.gitkeep
