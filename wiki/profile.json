@@ -1,0 +1,69 @@
+{
+  "name": "Creative AI Wiki",
+  "domain": "Generative AI and Creative Production",
+  "persona": "student-creator-researcher",
+  "description": "A source-backed LLM wiki for studying how generative AI changes creative production across music, image, video, film, advertising, and game content.",
+  "focus_areas": [
+    "creative workflow",
+    "copyright and licensing",
+    "music generation",
+    "film and video production",
+    "creator labor",
+    "market structure",
+    "ethics and authenticity"
+  ],
+  "impact_lenses": [
+    {
+      "id": "workflow",
+      "label": "Workflow Impact",
+      "description": "How generative AI changes creative pipelines from research to distribution."
+    },
+    {
+      "id": "copyright",
+      "label": "Copyright & Licensing",
+      "description": "How training data, outputs, likeness, style, and licensing affect rights."
+    },
+    {
+      "id": "creator_labor",
+      "label": "Creator Labor",
+      "description": "How AI tools reshape creative work, skills, roles, and bargaining power."
+    },
+    {
+      "id": "market_platform",
+      "label": "Market & Platform",
+      "description": "How model providers, platforms, studios, and tool vendors capture value."
+    },
+    {
+      "id": "ethics_authenticity",
+      "label": "Ethics & Authenticity",
+      "description": "How consent, disclosure, synthetic media, bias, and trust should be handled."
+    }
+  ],
+  "pipeline_stages": [
+    "research",
+    "ideation",
+    "generation",
+    "editing",
+    "review",
+    "distribution"
+  ],
+  "industries": [
+    "music",
+    "image",
+    "video",
+    "film",
+    "advertising",
+    "game"
+  ],
+  "pinned_pages": [
+    "wiki/overview.md",
+    "wiki/concepts/creative-ai-workflows.md",
+    "wiki/concepts/copyright-and-licensing.md",
+    "wiki/concepts/creator-labor-and-roles.md"
+  ],
+  "review_policy": {
+    "require_source_links": true,
+    "flag_noisy_extraction": true,
+    "avoid_api_keys": true
+  }
+}
